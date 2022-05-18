@@ -26,6 +26,14 @@ namespace AS2122_4E_INF_MabroukiYoussra_GestioneArticoli
 
         private void btnAggiungi_Click(object sender, EventArgs e)
         {
+            if (articoli.ContainsKey(txtCodice.Text))
+            {
+                articoli[txtCodice.Text] = new Articoli(txtCodice.Text, cmbUnita.Text, txtDescrizione.Text, Convert.ToDouble(txtPrezzo.Text));
+            }
+            else
+            {
+                articoli.Add(txtCodice.Text, new Articoli(txtCodice.Text, cmbUnita.Text, txtDescrizione.Text, Convert.ToDouble(txtPrezzo.Text)));
+            }
         }
     }
 }
