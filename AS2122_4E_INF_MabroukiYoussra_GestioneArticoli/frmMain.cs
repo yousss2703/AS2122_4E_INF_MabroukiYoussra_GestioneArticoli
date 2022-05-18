@@ -54,7 +54,9 @@ namespace AS2122_4E_INF_MabroukiYoussra_GestioneArticoli
 
         private void lstMostra_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            string curItem = lstMostra.SelectedItem.ToString();
+            int index = lstMostra.FindString(curItem);
+            txtCodice.Text = articoli.ElementAt(index).Value.ToString();
         }
     }
 }
