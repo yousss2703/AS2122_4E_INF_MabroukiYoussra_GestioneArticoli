@@ -35,5 +35,26 @@ namespace AS2122_4E_INF_MabroukiYoussra_GestioneArticoli
                 articoli.Add(txtCodice.Text, new Articoli(txtCodice.Text, cmbUnita.Text, txtDescrizione.Text, Convert.ToDouble(txtPrezzo.Text)));
             }
         }
+
+        private void btnMostra_Click(object sender, EventArgs e)
+        {
+            switch (cmbVisualizza.Text)
+            {
+                case "Visualizza Articoli":
+
+                    lstMostra.Items.Clear();
+                    foreach (KeyValuePair<string, Articoli> articolo in articoli)
+                    {
+                        lstMostra.Items.Add(articolo.Value.ToString());
+                    }
+
+                    break;
+            }
+        }
+
+        private void lstMostra_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

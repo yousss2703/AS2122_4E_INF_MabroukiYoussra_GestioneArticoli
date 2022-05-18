@@ -41,9 +41,9 @@ namespace AS2122_4E_INF_MabroukiYoussra_GestioneArticoli
             this.txtPrezzo = new System.Windows.Forms.TextBox();
             this.txtDescrizione = new System.Windows.Forms.TextBox();
             this.txtCodice = new System.Windows.Forms.TextBox();
-            this.btn2 = new System.Windows.Forms.Button();
+            this.btnMostra = new System.Windows.Forms.Button();
             this.grbDettagli = new System.Windows.Forms.GroupBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lstMostra = new System.Windows.Forms.ListBox();
             this.grbDettagli.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -155,14 +155,15 @@ namespace AS2122_4E_INF_MabroukiYoussra_GestioneArticoli
             this.txtCodice.Size = new System.Drawing.Size(125, 27);
             this.txtCodice.TabIndex = 11;
             // 
-            // btn2
+            // btnMostra
             // 
-            this.btn2.Location = new System.Drawing.Point(698, 44);
-            this.btn2.Name = "btn2";
-            this.btn2.Size = new System.Drawing.Size(58, 29);
-            this.btn2.TabIndex = 12;
-            this.btn2.Text = "...";
-            this.btn2.UseVisualStyleBackColor = true;
+            this.btnMostra.Location = new System.Drawing.Point(698, 44);
+            this.btnMostra.Name = "btnMostra";
+            this.btnMostra.Size = new System.Drawing.Size(58, 29);
+            this.btnMostra.TabIndex = 12;
+            this.btnMostra.Text = "...";
+            this.btnMostra.UseVisualStyleBackColor = true;
+            this.btnMostra.Click += new System.EventHandler(this.btnMostra_Click);
             // 
             // grbDettagli
             // 
@@ -182,22 +183,23 @@ namespace AS2122_4E_INF_MabroukiYoussra_GestioneArticoli
             this.grbDettagli.TabStop = false;
             this.grbDettagli.Text = "Dettagli articolo";
             // 
-            // listBox1
+            // lstMostra
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(514, 84);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(242, 304);
-            this.listBox1.TabIndex = 0;
+            this.lstMostra.FormattingEnabled = true;
+            this.lstMostra.ItemHeight = 20;
+            this.lstMostra.Location = new System.Drawing.Point(514, 84);
+            this.lstMostra.Name = "lstMostra";
+            this.lstMostra.Size = new System.Drawing.Size(242, 304);
+            this.lstMostra.TabIndex = 0;
+            this.lstMostra.SelectedIndexChanged += new System.EventHandler(this.lstMostra_SelectedIndexChanged);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.btn2);
+            this.Controls.Add(this.lstMostra);
+            this.Controls.Add(this.btnMostra);
             this.Controls.Add(this.cmbVisualizza);
             this.Controls.Add(this.lblNum);
             this.Controls.Add(this.lblArticoli);
@@ -226,9 +228,9 @@ namespace AS2122_4E_INF_MabroukiYoussra_GestioneArticoli
         private System.Windows.Forms.TextBox txtPrezzo;
         private System.Windows.Forms.TextBox txtDescrizione;
         private System.Windows.Forms.TextBox txtCodice;
-        private System.Windows.Forms.Button btn2;
+        private System.Windows.Forms.Button btnMostra;
         private System.Windows.Forms.GroupBox grbDettagli;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lstMostra;
     }
 }
 
