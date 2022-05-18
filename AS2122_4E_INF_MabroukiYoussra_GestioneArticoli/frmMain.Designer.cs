@@ -1,7 +1,7 @@
 ﻿
 namespace AS2122_4E_INF_MabroukiYoussra_GestioneArticoli
 {
-    partial class Form1
+    partial class frmMain
     {
         /// <summary>
         ///  Required designer variable.
@@ -36,11 +36,11 @@ namespace AS2122_4E_INF_MabroukiYoussra_GestioneArticoli
             this.lblArticoli = new System.Windows.Forms.Label();
             this.lblNum = new System.Windows.Forms.Label();
             this.btnAggiungi = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.cmbVisualizza = new System.Windows.Forms.ComboBox();
+            this.cmbUnita = new System.Windows.Forms.ComboBox();
+            this.txtPrezzo = new System.Windows.Forms.TextBox();
+            this.txtDescrizione = new System.Windows.Forms.TextBox();
+            this.txtCodice = new System.Windows.Forms.TextBox();
             this.btn2 = new System.Windows.Forms.Button();
             this.grbDettagli = new System.Windows.Forms.GroupBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
@@ -109,50 +109,51 @@ namespace AS2122_4E_INF_MabroukiYoussra_GestioneArticoli
             this.btnAggiungi.TabIndex = 6;
             this.btnAggiungi.Text = "Aggiungi/modifica articolo";
             this.btnAggiungi.UseVisualStyleBackColor = true;
+            this.btnAggiungi.Click += new System.EventHandler(this.btnAggiungi_Click);
             // 
-            // comboBox1
+            // cmbVisualizza
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbVisualizza.FormattingEnabled = true;
+            this.cmbVisualizza.Items.AddRange(new object[] {
             "Visualizza articoli"});
-            this.comboBox1.Location = new System.Drawing.Point(514, 44);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(179, 28);
-            this.comboBox1.TabIndex = 7;
+            this.cmbVisualizza.Location = new System.Drawing.Point(514, 44);
+            this.cmbVisualizza.Name = "cmbVisualizza";
+            this.cmbVisualizza.Size = new System.Drawing.Size(179, 28);
+            this.cmbVisualizza.TabIndex = 7;
             // 
-            // comboBox2
+            // cmbUnita
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cmbUnita.FormattingEnabled = true;
+            this.cmbUnita.Items.AddRange(new object[] {
             "NR",
             "KG",
             "Q",
             "T"});
-            this.comboBox2.Location = new System.Drawing.Point(154, 129);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(125, 28);
-            this.comboBox2.TabIndex = 8;
+            this.cmbUnita.Location = new System.Drawing.Point(154, 129);
+            this.cmbUnita.Name = "cmbUnita";
+            this.cmbUnita.Size = new System.Drawing.Size(125, 28);
+            this.cmbUnita.TabIndex = 8;
             // 
-            // textBox1
+            // txtPrezzo
             // 
-            this.textBox1.Location = new System.Drawing.Point(154, 172);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 27);
-            this.textBox1.TabIndex = 9;
+            this.txtPrezzo.Location = new System.Drawing.Point(154, 172);
+            this.txtPrezzo.Name = "txtPrezzo";
+            this.txtPrezzo.Size = new System.Drawing.Size(125, 27);
+            this.txtPrezzo.TabIndex = 9;
             // 
-            // textBox2
+            // txtDescrizione
             // 
-            this.textBox2.Location = new System.Drawing.Point(154, 86);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(125, 27);
-            this.textBox2.TabIndex = 10;
+            this.txtDescrizione.Location = new System.Drawing.Point(154, 86);
+            this.txtDescrizione.Name = "txtDescrizione";
+            this.txtDescrizione.Size = new System.Drawing.Size(125, 27);
+            this.txtDescrizione.TabIndex = 10;
             // 
-            // textBox3
+            // txtCodice
             // 
-            this.textBox3.Location = new System.Drawing.Point(154, 44);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(125, 27);
-            this.textBox3.TabIndex = 11;
+            this.txtCodice.Location = new System.Drawing.Point(154, 44);
+            this.txtCodice.Name = "txtCodice";
+            this.txtCodice.Size = new System.Drawing.Size(125, 27);
+            this.txtCodice.TabIndex = 11;
             // 
             // btn2
             // 
@@ -165,11 +166,11 @@ namespace AS2122_4E_INF_MabroukiYoussra_GestioneArticoli
             // 
             // grbDettagli
             // 
-            this.grbDettagli.Controls.Add(this.textBox3);
-            this.grbDettagli.Controls.Add(this.textBox2);
-            this.grbDettagli.Controls.Add(this.comboBox2);
+            this.grbDettagli.Controls.Add(this.txtCodice);
+            this.grbDettagli.Controls.Add(this.txtDescrizione);
+            this.grbDettagli.Controls.Add(this.cmbUnita);
             this.grbDettagli.Controls.Add(this.btnAggiungi);
-            this.grbDettagli.Controls.Add(this.textBox1);
+            this.grbDettagli.Controls.Add(this.txtPrezzo);
             this.grbDettagli.Controls.Add(this.lblCodice);
             this.grbDettagli.Controls.Add(this.label2);
             this.grbDettagli.Controls.Add(this.lblUnita);
@@ -190,19 +191,20 @@ namespace AS2122_4E_INF_MabroukiYoussra_GestioneArticoli
             this.listBox1.Size = new System.Drawing.Size(242, 304);
             this.listBox1.TabIndex = 0;
             // 
-            // Form1
+            // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btn2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbVisualizza);
             this.Controls.Add(this.lblNum);
             this.Controls.Add(this.lblArticoli);
             this.Controls.Add(this.grbDettagli);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "frmMain";
+            this.Text = "frmMain";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.grbDettagli.ResumeLayout(false);
             this.grbDettagli.PerformLayout();
             this.ResumeLayout(false);
@@ -219,11 +221,11 @@ namespace AS2122_4E_INF_MabroukiYoussra_GestioneArticoli
         private System.Windows.Forms.Label lblArticoli;
         private System.Windows.Forms.Label lblNum;
         private System.Windows.Forms.Button btnAggiungi;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.ComboBox cmbVisualizza;
+        private System.Windows.Forms.ComboBox cmbUnita;
+        private System.Windows.Forms.TextBox txtPrezzo;
+        private System.Windows.Forms.TextBox txtDescrizione;
+        private System.Windows.Forms.TextBox txtCodice;
         private System.Windows.Forms.Button btn2;
         private System.Windows.Forms.GroupBox grbDettagli;
         private System.Windows.Forms.ListBox listBox1;
